@@ -1,0 +1,34 @@
+# Dependencies
+node_modules/
+
+# Build output
+build/
+dist/
+*.tsbuildinfo
+
+# Local environment and secrets
+.env
+.env.*
+!.env.example
+
+# Captured traffic can contain cookies/session tokens
+*.har
+
+# Local generated files
+downloads/
+outputs/
+work/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Test/cache output
+coverage/
+.nyc_output/
+
+# macOS
+.DS_Store
