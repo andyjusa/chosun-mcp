@@ -167,9 +167,10 @@ npm run inspect
 - `chosun_oj_home`: judge 홈 조회
 - `chosun_oj_student_main`: 학생 메인 조회
 - `chosun_oj_contest_problem_list`: 대회/과제 문제 목록 조회
-- `chosun_oj_status`: 제출 상태 조회
-- `chosun_oj_source`: 제출 소스 조회
-- `chosun_oj_problem_info`: 문제 상세 조회
+- `chosun_oj_status`: 제출 상태 조회(`/10`, `/20`... 페이지 자동 수집, `maxPages`)
+- `chosun_oj_contest_scoreboard`: contest 전체 제출을 userId -> 문제별 최고점 -> 총점으로 집계
+- `chosun_oj_source`: 제출 소스 조회(`problemText`, `submittedCode`, `filledAnswers` 분리)
+- `chosun_oj_problem_info`: 문제 상세 조회 및 본문 접근 가능 여부(`access.reason`) 표시
 
 ## 사용 예시
 
@@ -197,6 +198,7 @@ OJ 문제 조회 흐름:
 1. `chosun_oj_student_main`으로 `classId` 기준 화면을 확인합니다.
 2. `chosun_oj_contest_problem_list`로 `contestId`의 문제 목록을 조회합니다.
 3. `chosun_oj_problem_info` 또는 `chosun_oj_status`로 문제/제출 상태를 확인합니다.
+4. 대회 전체 집계가 필요하면 `chosun_oj_contest_scoreboard`에 `classId`, `contestId`를 넘깁니다.
 
 ## 로그인 흐름 요약
 
